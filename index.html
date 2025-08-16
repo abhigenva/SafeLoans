@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeLoans - Your Trusted Financial Partner</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -494,6 +495,24 @@
             font-weight: bold;
             color: #2a5298;
         }
+
+        .whatsapp_float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+        .whatsapp-icon {
+            margin-top: 16px;
+        }
     </style>
 </head>
 <body>
@@ -514,6 +533,10 @@
             </button>
         </nav>
     </header>
+
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+    </a>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
