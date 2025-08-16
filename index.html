@@ -848,9 +848,9 @@
             if (principal && rate && time) {
                 const payment = (principal * rate * Math.pow(1 + rate, time)) / (Math.pow(1 + rate, time) - 1);
                 document.getElementById('calcResult').innerHTML = `
-                    <div>Monthly Payment: $${payment.toFixed(2)}</div>
+                    <div>Monthly Payment: ₹${payment.toFixed(2)}</div>
                     <div style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
-                        Total Interest: $${((payment * time) - principal).toFixed(2)}
+                        Total Interest: ₹${((payment * time) - principal).toFixed(2)}
                     </div>
                 `;
             } else {
