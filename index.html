@@ -882,18 +882,14 @@
         }
 
         // Form Submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzPqqtGx9SXr5FyrBzyqSS8DoKHmqrjBPDiX-GH2scMjWY_uPm29xWG2-LPNyqVJFk4/exec';
         document.getElementById('loanForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzPqqtGx9SXr5FyrBzyqSS8DoKHmqrjBPDiX-GH2scMjWY_uPm29xWG2-LPNyqVJFk4/exec';
-            const form = document.getElementById('loanForm');
-            form.addEventListener('submit', e => {
-                e.preventDefault();
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => alert('Success!'))
                 .catch(error => alert('Error!'));
-            });
-            
+
             // Simulate form submission
             const submitBtn = this.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
