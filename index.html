@@ -887,12 +887,12 @@
 
             const scriptURL = 'https://script.google.com/macros/s/AKfycbw2vzvf52zwmomdRCUTRCRBu7ah2yVde4t8jhQgAKw7kGpk3lcaOwjK2AdEBFjffLyo/exec';
             const form = document.getElementById('loanForm');
-            form.addEventListener('submit', e => {
-                e.preventDefault();
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => alert('Success!'))
-                .catch(error => alert('Error!'));
-            });
+            
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => alert('Success!'))
+            .catch(error => alert('Error!'));
+          
             
             // Simulate form submission
             const submitBtn = this.querySelector('.submit-btn');
